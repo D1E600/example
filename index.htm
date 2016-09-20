@@ -1,0 +1,37 @@
+<html>
+<body>
+<form action="http://127.0.0.1:8081/process_get" method="POST">
+
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspFORMULARIO.<br><br>
+Nombre&nbsp:  <input type="text" name="first_name">  <br><br>
+
+Apellido&nbsp:  <input type="text" name="last_name"> <br><br>
+
+Edad&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:  <INPUT type="text" SIZE=2 name="edad" onChange="validarSiNumero(this.value);"> <br><br>
+
+Sexo&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: <select name="sexo">
+    <option value="M">Masculino</option>
+    <option value="F">Femenino</option>
+</select> <br><br>
+
+e-mail&nbsp&nbsp&nbsp&nbsp: <INPUT type="text" name="email" onChange="verificaremail(this.value);"> <br><br>
+
+    <script>
+      function validarSiNumero(edad){
+        if (!/^([0-9])*$/.test(edad))
+          alert("El valor " + edad + " no es un numero");
+      }
+
+      function verificaremail($email){ 
+      if (!ereg("^([a-zA-Z0-9._]+)@([a-zA-Z0-9.-]+).([a-zA-Z]{2,4})$",$email)){ 
+          alert("El correo " + email + " no es valido");
+  } else { 
+       return TRUE; 
+  } 
+} 
+    </script>
+
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" value=" Enviar">
+</form>
+</body>
+</html>
